@@ -1,0 +1,293 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f3f1f1;
+}
+
+.black-box {
+  width: 20px;
+  height: 20px;
+  background-color: #b78bbf;
+}
+
+#mobile-nav {
+  display: flex;
+  align-items: center;
+}
+
+#mobile-nav img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+#menu-toggle {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+#menu-toggle i {
+  font-size: 20px;
+  color: #b78bbf;
+}
+.dropdown-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-menu li {
+  margin: 5px 0; /* Add some margin between list items */
+}
+
+.dropdown[open] .dropdown-menu {
+  display: block; /* Display the menu when the details are open */
+}
+
+/* Optional styles for the black box (summary) */
+.black-box {
+  width: 20px;
+  height: 20px;
+  background-color: #b78bbf;
+  cursor: pointer; /* Indicate clickable behavior */
+}
+
+#desktop-nav {
+  display: flex; /* Parent container is a flexbox */
+  align-items: center; /* Align items vertically in the container */
+}
+
+#desktop-nav .logo {
+  /* Move logo styling outside the flexbox */
+  display: flex;
+  align-items: center; /* Center logo content vertically */
+  margin-right: 20px;
+}
+
+#desktop-nav .logo span {
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+#desktop-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#desktop-nav li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+#desktop-nav a {
+  text-decoration: none;
+  color: #333;
+}
+
+#desktop-nav img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+h1,
+h2 {
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cebdd0;
+  margin-bottom: 15px;
+}
+
+.variant-container {
+  margin-bottom: 20px;
+}
+
+.variant {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.variant button {
+  background-color: #b78bbf;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.add-variant {
+  background-color: #b78bbf;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.add-variant:focus,
+.add-variant:active {
+  background-color: #d669e8; /* Highlight color on focus/click */
+}
+
+.remove-variant {
+  display: none;
+}
+
+.variant:hover .remove-variant {
+  display: inline-block;
+}
+.product-variant-container {
+  display: flex; /* Arrange variants horizontally */
+  flex-wrap: wrap; /* Allow variants to wrap to new lines if needed */
+  margin: 10px 0; /* Add some margin for spacing */
+}
+
+.product-variant {
+  display: flex; /* Arrange variant elements side-by-side */
+  align-items: center; /* Align elements vertically within the variant */
+  margin: 5px; /* Add some margin between variants */
+  border: 1px solid #ddd; /* Add a thin border */
+  padding: 5px; /* Add some padding inside the variant */
+  border-radius: 5px; /* Add rounded corners */
+}
+
+.product-variant input[type="text"],
+.product-variant input[type="number"] {
+  border: 1px solid #ccc; /* Individual input field border */
+  padding: 5px; /* Padding for input fields */
+  margin-right: 10px; /* Add spacing between input fields */
+  width: 100px; /* Set a fixed width for text and number inputs */
+}
+
+.product-variant input[type="file"] {
+  padding: 5px; /* Padding for file input field */
+}
+
+.product-variant button.remove-variant {
+  background-color: #f00; /* Red background for remove button */
+  color: #fff; /* White text for remove button */
+  padding: 5px 10px; /* Padding for remove button */
+  border: none; /* Remove default button border */
+  border-radius: 5px; /* Rounded corners for remove button */
+  cursor: pointer; /* Indicate clickable behavior */
+  position: absolute; /* Make button absolute within variant */
+  top: 50%; /* Position button vertically in the middle */
+  transform: translateY(-50%); /* Offset button position for centering */
+  right: 5px; /* Position button on the right side with some margin */
+}
+/* Styles for Product Category Buttons */
+#product-categories {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+#product-categories button {
+  background-color: #b78bbf;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+#product-categories button:active {
+  background-color: #d669e8;
+  color: white;
+}
+.category-button[placeholder]:not(:focus):not(:active) {
+  color: #ccc;
+  font-style: italic;
+}
+
+/* Styles for Toggle Switch */
+.new-product input[type="checkbox"] {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.new-product .toggle {
+  display: block;
+  width: 60px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: #6a6666;
+  position: relative;
+}
+
+.new-product .toggle:after {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #cebdd0;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.new-product input[type="checkbox"]:checked + .toggle:after {
+  transform: translateX(38px);
+}
+
+.new-product .toggle:before {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #d669e8;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.new-product input[type="checkbox"]:checked + .toggle:before {
+  opacity: 1;
+}
+@media (max-width: 768px) {
+  #product-categories {
+    flex-wrap: wrap;
+    justify-content: space-between; /* Maintain spacing between buttons */
+  }
+  #product-categories button {
+    width: 48%; /* Set button width to roughly half the screen width */
+    margin-bottom: 10px; /* Add some margin for better spacing on smaller screens */
+  }
+  #desktop-nav {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  #mobile-nav {
+    display: none;
+  }
+  #desktop-nav {
+    justify-content: flex-end; /* Move items to the right side */
+  }
+}
