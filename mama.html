@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav id="mobile-nav">
+        <details class="dropdown">
+            <summary class="black-box"></summary>
+            <ul class="dropdown-menu">
+                <li><a href="#">Insights</a></li>
+                <li><a href="#">Sales</a></li>
+                <li><a href="#">Pending Orders</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Stock</a></li>
+            </ul>
+        </details>
+        <button type="button" id="menu-toggle">
+            <i class="fas fa-bars"></i> </button>
+        <img src="user.png" alt="User Photo">
+    </nav>
+    
+        <nav id="desktop-nav">
+            <div class="logo">
+                <div class="black-box"></div>
+                <span>MAMA'S CORNER</span>
+            </div>
+            <ul>
+                <li><a href="#">Insights</a></li>
+                <li><a href="#">Sales</a></li>
+                <li><a href="#">Pending Orders</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Stock</a></li>
+            </ul>
+            <img src="user.png" alt="User Photo">
+        </nav>
+    </header>
+    <h1>Add Product</h1>
+
+    <form id="product-form">
+        <label for="product-name">Product Name:</label>
+        <input type="text" id="product-name" name="product-name" required placeholder="Enter Product Name">
+
+
+        <label for="product-description">Description:</label>
+        <input type="text" id="product-name" name="product-name" required placeholder="Enter Product Description">
+        </form>
+        <h2>Product Photos</h2>
+        <div id="product-photos">
+            <label for="product-photo">Attach photos</label>
+            <input type="file" id="product-photo" name="product-photo[]" accept="image/*">
+        </div>
+        <h2>Product Category</h2>
+        <div id="product-categories">
+            <button type="button" class="category-button">Fruits</button>
+            <button type="button" class="category-button">Vegetables</button>
+            <button type="button" class="category-button">Traditional Roots</button>
+            <button type="button" class="category-button">Fresh Juice</button>
+            <button type="button" class="category-button" placeholder="Add category">Add category</button>
+        </div>
+        <h2>New Product</h2>
+        <div class="new-product">
+            <label for="is-new-product">Mark as New:</label>
+            <input type="checkbox" id="is-new-product" name="is-new-product">
+            <label for="is-new-product" class="toggle"></label>
+        </div>
+
+        <h2>Add product variations</h2>
+        <div class="variant-container">
+            <div class="variant">
+                <input type="text" id="variant-name" name="variant-name[]" required placeholder="juice"
+                    style="margin-right: 10px;">
+                <input type="number" id="variant-price" name="variant-price[]" required placeholder="2"
+                    style="margin-right: 10px;">
+                <button type="button" class="remove-variant">Remove</button>
+
+            </div>
+        </div>
+        <div class="product-variant-container">
+            <div class="product-variant"> <input type="text" id="variant-name-1" name="variant-name[]" required value="500ml"
+                    style="margin-right: 10px;">
+                <input type="file" id="variant-photo-1" name="variant-photo[]" accept="image/*" style="margin-right: 10px;">
+                <input type="number" id="variant-quantity-1" name="variant-quantity[]" required placeholder="0">
+                <button type="button" class="remove-variant">Remove</button>
+            </div>
+        
+            <div class="product-variant"> <input type="text" id="variant-name-2" name="variant-name[]" required value="100ml"
+                    style="margin-right: 10px;">
+                <input type="file" id="variant-photo-2" name="variant-photo[]" accept="image/*" style="margin-right: 10px;">
+                <input type="number" id="variant-quantity-2" name="variant-quantity[]" required placeholder="0">
+                <button type="button" class="remove-variant">Remove</button>
+            </div>
+        
+        </div>
+
+        <div class="variant-container">
+            <div class="variant">
+                <input type="text" id="variant-name" name="variant-name[]" required placeholder="Enter variant Name" style="margin-right: 10px;">
+                <input type="number" id="variant-price" name="variant-price[]" required placeholder="No of variations" style="margin-right: 10px;">
+
+                <button type="button" class="remove-variant">Remove</button>
+            </div>
+        </div>
+
+        <button type="button" class="add-variant">Add Variant</button>
+
+        <button type="submit" class="add-variant">Save Product</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
